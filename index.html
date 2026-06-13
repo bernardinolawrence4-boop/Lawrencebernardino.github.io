@@ -3,254 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aspiring Virtual Assistant | Lawrence Bernardino</title>
+<title>Lawrence Bernardino | Aspiring Virtual Assistant</title>
 
 <style>
-:root{
-  --bg:#F5F0E6;
-  --text:#3E3E3E;
-  --card:#ffffff;
-  --accent:#B08968;
-  --sidebar:#D8C3A5;
-}
-
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  scroll-behavior:smooth;
-}
-
-.sidebar{
-  position:fixed;
-  width:250px;
-  height:100%;
-  background:var(--sidebar);
-  text-align:center;
-  padding:20px;
-}
-
-.sidebar img{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  border:3px solid var(--accent);
-  object-fit:cover;
-}
-
-.sidebar h3{
-  margin-top:10px;
-}
-
-.sidebar p{
-  font-size:14px;
-  opacity:0.8;
-}
-
-.sidebar a{
-  display:block;
-  margin:15px 0;
-  text-decoration:none;
-  color:var(--text);
-  font-weight:bold;
-}
-
-.main{
-  margin-left:250px;
+margin:0;
+font-family:Arial, sans-serif;
+background:#F5F0E6;
+color:#3E3E3E;
 }
 
 .hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:80px;
-  background:
-  linear-gradient(rgba(245,240,230,.85),rgba(245,240,230,.85)),
-  url('Workspace.jpg');
-  background-size:cover;
-  background-position:center;
+padding:90px 30px;
+text-align:center;
+background:linear-gradient(rgba(245,240,230,.85),rgba(245,240,230,.85)),url('Workspace.jpg');
+background-size:cover;
+background-position:center;
 }
 
 .hero h1 span{
-  color:var(--accent);
+color:#B08968;
+}
+
+.hero h3{
+margin-top:10px;
+font-weight:normal;
+}
+
+.cta{
+margin-top:20px;
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .btn{
-  background:var(--accent);
-  color:white;
-  padding:12px 25px;
-  border-radius:30px;
-  text-decoration:none;
-  display:inline-block;
-  margin-top:20px;
-  transition:0.3s;
+background:#B08968;
+color:white;
+padding:12px 20px;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
 }
 
-.btn:hover{
-  transform:translateY(-3px);
+.secondary{
+background:#3E3E3E;
 }
 
 section{
-  padding:80px;
+padding:60px 30px;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
 }
 
 .card{
-  background:var(--card);
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  margin-bottom:20px;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+margin-bottom:15px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
 }
 
-.bar{
-  height:10px;
-  background:#ddd;
-  border-radius:10px;
-  overflow:hidden;
-  margin-bottom:15px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+max-width:1100px;
+margin:0 auto;
 }
 
-.fill{
-  height:10px;
-  background:var(--accent);
+.box{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 8px 18px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:#25D366;
-  color:white;
-  padding:14px 16px;
-  border-radius:50%;
-  font-size:18px;
-  text-decoration:none;
+.box:hover{
+transform:translateY(-6px);
 }
 
-.resume{
-  position:fixed;
-  left:20px;
-  bottom:20px;
-  background:#111;
-  color:white;
-  padding:10px 15px;
-  border-radius:20px;
-  text-decoration:none;
-  font-size:14px;
+.box img, .box video{
+width:100%;
+height:200px;
+object-fit:cover;
 }
 
-.hidden{
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s ease;
+.contact-info{
+text-align:center;
 }
 
-.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-@media(max-width:768px){
-  .sidebar{
-    position:relative;
-    width:100%;
-    height:auto;
-  }
-
-  .main{
-    margin-left:0;
-  }
-
-  section{
-    padding:40px 20px;
-  }
-}
 </style>
 </head>
 
 <body>
 
-<div class="sidebar">
-<img src="your-photo.jpg">
-<h3>Lawrence Bernardino</h3>
-<p>Aspiring Virtual Assistant</p>
-
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#contact">Contact</a>
-</div>
-
-<div class="main">
-
-<section class="hero" id="home">
+<section class="hero" id="top">
 <h1>Hello, I'm <span>Lawrence</span></h1>
-<p>Aspiring Virtual Assistant | Detail-Oriented | Fast Learner</p>
-<a class="btn" href="#contact">Contact Me</a>
-</section>
 
-<section id="about" class="hidden">
-<div class="card">
-<h2>About Me</h2>
-<p>I am an aspiring Virtual Assistant looking for opportunities to gain experience in administrative tasks, customer support, and digital work. I am highly motivated, willing to learn, and committed to improving my skills to support businesses effectively.</p>
+<h3>Aspiring Virtual Assistant</h3>
+
+<p>I help businesses stay organized through admin support, customer service, and digital assistance.</p>
+
+<div class="cta">
+<a href="#contact" class="btn">Hire Me</a>
+<a href="lawrence.pdf" class="btn secondary">Download Resume</a>
 </div>
 </section>
 
-<section id="skills" class="hidden">
-<div class="card">
+<section>
+<h2>Portfolio</h2>
+
+<div class="grid">
+<div class="box"><img src="photo1.jpg"></div>
+<div class="box"><img src="photo2.jpg"></div>
+<div class="box"><img src="photo3.jpg"></div>
+<div class="box"><img src="photo4.jpg"></div>
+<div class="box"><img src="photo5.jpg"></div>
+<div class="box"><img src="photo6.jpg"></div>
+
+<div class="box"><video controls src="video1.mp4"></video></div>
+<div class="box"><video controls src="video2.mp4"></video></div>
+<div class="box"><video controls src="video3.mp4"></video></div>
+</div>
+</section>
+
+<section>
 <h2>Skills</h2>
 
-<p>Communication</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-
-<p>Computer Literacy</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-
-<p>Attention to Detail</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-
-<p>Willingness to Learn</p>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
-
+<div class="card">
+<p>Virtual Assistant • Customer Support • Data Entry • Email Management • Administrative Tasks • Communication • Attention to Detail • Fast Learner</p>
 </div>
 </section>
 
-<section id="portfolio" class="hidden">
+<section>
+<h2>About Me</h2>
+
 <div class="card">
-<h2>Portfolio</h2>
-<p>Here I will upload sample projects such as practice editing work, Canva designs, and training tasks as I continue learning and improving my skills.</p>
+<p>I am an aspiring Virtual Assistant seeking entry-level opportunities where I can support businesses with administrative tasks, customer service, and digital operations. I am motivated, reliable, and eager to learn new tools and workflows.</p>
 </div>
 </section>
 
-<section id="contact" class="hidden">
-<div class="card">
+<section id="contact">
 <h2>Contact Me</h2>
-<p>Email: Bernardinolawrence4@gmail.com</p>
+
+<div class="card contact-info">
+<p><strong>Email:</strong> bernardinolawrence4@gmail.com</p>
+<p><strong>Facebook:</strong> Lawrence Prowel Bernardino</p>
+<p><strong>Phone:</strong> 099168324416</p>
+
+<div class="cta">
+<a class="btn" href="mailto:bernardinolawrence4@gmail.com">Send Email</a>
+<a class="btn secondary" href="#top">Back to Top</a>
+</div>
 </div>
 </section>
-
-</div>
-
-<a class="whatsapp" href="https://wa.me/+63 9916 832 4416" target="_blank">💬</a>
-
-<a class="resume" href="lawrence.pdf" download>Download CV</a>
-
-<script>
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-document.querySelectorAll(".hidden").forEach(el=>{
-  observer.observe(el);
-});
-</script>
 
 </body>
 </html>
