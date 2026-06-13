@@ -5,25 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lawrence Bernardino | Virtual Assistant</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:#0B0F1A;
+background:#070A12;
 color:#E6EAF2;
 }
 
 .hero{
 padding:90px 30px;
 text-align:center;
-background:linear-gradient(rgba(11,15,26,.85),rgba(11,15,26,.95)),url('Workspace.jpg');
+background:linear-gradient(rgba(7,10,18,.92),rgba(7,10,18,.98)),url('Workspace.jpg');
 background-size:cover;
 background-position:center;
 }
 
-.hero h1 span{
-color:#4DA3FF;
-}
+.hero h1 span{color:#4DA3FF;}
 
 .hero h3{
 margin-top:10px;
@@ -31,9 +35,7 @@ font-weight:normal;
 color:#AAB4C8;
 }
 
-p{
-color:#C7D0E0;
-}
+p{color:#C7D0E0;}
 
 .cta{
 margin-top:20px;
@@ -50,8 +52,10 @@ padding:12px 20px;
 border-radius:25px;
 text-decoration:none;
 font-weight:bold;
-display:inline-block;
 transition:0.3s;
+display:inline-flex;
+align-items:center;
+gap:8px;
 }
 
 .btn:hover{
@@ -66,24 +70,39 @@ border:1px solid #2A3550;
 
 section{
 padding:60px 30px;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 h2{
 text-align:center;
-margin-bottom:20px;
 color:#4DA3FF;
+margin-bottom:20px;
+}
+
+.sub-title{
+text-align:center;
+color:#AAB4C8;
+margin:20px 0 10px;
+font-size:18px;
+letter-spacing:1px;
 }
 
 .card{
-background:#111827;
+background:#0E1424;
 padding:20px;
 border-radius:12px;
-box-shadow:0 10px 20px rgba(0,0,0,0.4);
-margin-bottom:15px;
-max-width:800px;
-margin-left:auto;
-margin-right:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
 border:1px solid #1F2A44;
+max-width:800px;
+margin:0 auto;
+margin-bottom:15px;
 }
 
 .grid{
@@ -95,12 +114,11 @@ margin:0 auto;
 }
 
 .box{
-background:#111827;
+background:#0E1424;
 border-radius:10px;
 overflow:hidden;
-box-shadow:0 8px 18px rgba(0,0,0,0.5);
-transition:0.3s;
 border:1px solid #1F2A44;
+transition:0.3s;
 }
 
 .box:hover{
@@ -114,34 +132,38 @@ height:200px;
 object-fit:cover;
 }
 
-.contact-info{
-text-align:center;
+.contact-item{
+display:flex;
+align-items:center;
+gap:10px;
+margin:8px 0;
+color:#C7D0E0;
 }
 
-a{
+.contact-item i{
 color:#4DA3FF;
+width:18px;
 }
-
 </style>
 </head>
 
 <body>
 
-<section class="hero" id="top">
+<section class="hero">
 <h1>Hello, I'm <span>Lawrence</span></h1>
-
 <h3>Aspiring Virtual Assistant</h3>
-
-<p>I help businesses stay organized through admin support, customer service, and digital assistance.</p>
+<p>Admin Support • Customer Service • Data Entry • Digital Assistance</p>
 
 <div class="cta">
-<a href="#contact" class="btn">Hire Me</a>
-<a href="lawrence.pdf" class="btn secondary">Download Resume</a>
+<a href="#contact" class="btn"><i class="fa-solid fa-user-tie"></i> Hire Me</a>
+<a href="lawrence.pdf" class="btn secondary"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
 </div>
 </section>
 
 <section>
 <h2>Portfolio</h2>
+
+<div class="sub-title">PHOTO EDITS</div>
 
 <div class="grid">
 <div class="box"><img src="photo1.jpg"></div>
@@ -150,16 +172,20 @@ color:#4DA3FF;
 <div class="box"><img src="photo4.jpg"></div>
 <div class="box"><img src="photo5.jpg"></div>
 <div class="box"><img src="photo6.jpg"></div>
+</div>
 
+<div class="sub-title">VIDEO EDITS</div>
+
+<div class="grid">
 <div class="box"><video controls src="video1.mp4"></video></div>
 <div class="box"><video controls src="video2.mp4"></video></div>
 <div class="box"><video controls src="video3.mp4"></video></div>
 </div>
+
 </section>
 
 <section>
 <h2>Skills</h2>
-
 <div class="card">
 <p>Virtual Assistant • Customer Support • Data Entry • Email Management • Administrative Tasks • Communication • Attention to Detail • Fast Learner</p>
 </div>
@@ -167,26 +193,55 @@ color:#4DA3FF;
 
 <section>
 <h2>About Me</h2>
-
 <div class="card">
-<p>I am an aspiring Virtual Assistant seeking entry-level opportunities where I can support businesses with administrative tasks, customer service, and digital operations. I am motivated, reliable, and eager to learn new tools and workflows.</p>
+<p>I am an aspiring Virtual Assistant seeking entry-level opportunities to support businesses with administrative tasks, customer service, and digital operations. I am motivated, reliable, and eager to learn new tools and workflows.</p>
 </div>
 </section>
 
 <section id="contact">
 <h2>Contact Me</h2>
 
-<div class="card contact-info">
-<p><strong>Email:</strong> bernardinolawrence4@gmail.com</p>
-<p><strong>Facebook:</strong> Lawrence Prowel Bernardino</p>
-<p><strong>Phone:</strong> 099168324416</p>
+<div class="card">
+
+<div class="contact-item">
+<i class="fa-solid fa-envelope"></i>
+<span>bernardinolawrence4@gmail.com</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-brands fa-facebook"></i>
+<span>Lawrence Prowel Bernardino</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-phone"></i>
+<span>09918324416</span>
+</div>
 
 <div class="cta">
-<a class="btn" href="mailto:bernardinolawrence4@gmail.com">Send Email</a>
-<a class="btn secondary" href="#top">Back to Top</a>
+<a class="btn" href="mailto:bernardinolawrence4@gmail.com"><i class="fa-solid fa-paper-plane"></i> Send Email</a>
+<a class="btn secondary" href="#top"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
 </div>
+
 </div>
+
 </section>
+
+<script>
+const sections=document.querySelectorAll("section");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:0.15});
+
+sections.forEach(sec=>{
+observer.observe(sec);
+});
+</script>
 
 </body>
 </html>
