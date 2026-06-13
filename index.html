@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lawrence Bernardino | VA Portfolio</title>
+<title>Aspiring Virtual Assistant | Lawrence Bernardino</title>
 
 <style>
 :root{
@@ -16,13 +16,12 @@
 
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Arial, sans-serif;
   background:var(--bg);
   color:var(--text);
   scroll-behavior:smooth;
 }
 
-/* SIDEBAR */
 .sidebar{
   position:fixed;
   width:250px;
@@ -34,8 +33,19 @@ body{
 
 .sidebar img{
   width:120px;
+  height:120px;
   border-radius:50%;
   border:3px solid var(--accent);
+  object-fit:cover;
+}
+
+.sidebar h3{
+  margin-top:10px;
+}
+
+.sidebar p{
+  font-size:14px;
+  opacity:0.8;
 }
 
 .sidebar a{
@@ -46,23 +56,19 @@ body{
   font-weight:bold;
 }
 
-/* MAIN */
 .main{
   margin-left:250px;
 }
 
-/* HERO WITH WORKSPACE BACKGROUND */
 .hero{
   min-height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   padding:80px;
-
   background:
-  linear-gradient(rgba(245,240,230,.80),rgba(245,240,230,.80)),
+  linear-gradient(rgba(245,240,230,.85),rgba(245,240,230,.85)),
   url('Workspace.jpg');
-
   background-size:cover;
   background-position:center;
 }
@@ -71,7 +77,6 @@ body{
   color:var(--accent);
 }
 
-/* BUTTON */
 .btn{
   background:var(--accent);
   color:white;
@@ -80,32 +85,31 @@ body{
   text-decoration:none;
   display:inline-block;
   margin-top:20px;
-  transition:.3s;
+  transition:0.3s;
 }
 
 .btn:hover{
   transform:translateY(-3px);
 }
 
-/* SECTIONS */
 section{
   padding:80px;
 }
 
-/* CARDS */
 .card{
   background:var(--card);
   padding:25px;
   border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
   margin-bottom:20px;
 }
 
-/* SKILLS */
 .bar{
   height:10px;
   background:#ddd;
   border-radius:10px;
+  overflow:hidden;
+  margin-bottom:15px;
 }
 
 .fill{
@@ -113,7 +117,6 @@ section{
   background:var(--accent);
 }
 
-/* FLOATING WHATSAPP */
 .whatsapp{
   position:fixed;
   right:20px;
@@ -126,7 +129,6 @@ section{
   text-decoration:none;
 }
 
-/* RESUME BUTTON */
 .resume{
   position:fixed;
   left:20px;
@@ -136,28 +138,44 @@ section{
   padding:10px 15px;
   border-radius:20px;
   text-decoration:none;
+  font-size:14px;
 }
 
-/* SCROLL ANIMATION */
 .hidden{
   opacity:0;
   transform:translateY(40px);
-  transition:1s;
+  transition:1s ease;
 }
 
 .show{
   opacity:1;
   transform:translateY(0);
 }
+
+@media(max-width:768px){
+  .sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+  }
+
+  .main{
+    margin-left:0;
+  }
+
+  section{
+    padding:40px 20px;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
 <img src="your-photo.jpg">
 <h3>Lawrence Bernardino</h3>
+<p>Aspiring Virtual Assistant</p>
 
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -166,75 +184,60 @@ section{
 <a href="#contact">Contact</a>
 </div>
 
-<!-- MAIN -->
 <div class="main">
 
-<!-- HERO -->
 <section class="hero" id="home">
 <h1>Hello, I'm <span>Lawrence</span></h1>
-<p>Virtual Assistant | Customer Support | Editor</p>
-<a class="btn" href="#contact">Hire Me</a>
+<p>Aspiring Virtual Assistant | Detail-Oriented | Fast Learner</p>
+<a class="btn" href="#contact">Contact Me</a>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="hidden">
 <div class="card">
 <h2>About Me</h2>
-<p>I am a Virtual Assistant with experience in customer support, email handling, and content editing. I help businesses stay organized and efficient.</p>
+<p>I am an aspiring Virtual Assistant looking for opportunities to gain experience in administrative tasks, customer support, and digital work. I am highly motivated, willing to learn, and committed to improving my skills to support businesses effectively.</p>
 </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" class="hidden">
 <div class="card">
 <h2>Skills</h2>
 
-<p>Customer Support</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-
-<p>Email Management</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-
-<p>Editing</p>
+<p>Communication</p>
 <div class="bar"><div class="fill" style="width:80%"></div></div>
 
-<p>Canva</p>
-<div class="bar"><div class="fill" style="width:75%"></div></div>
+<p>Computer Literacy</p>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+
+<p>Attention to Detail</p>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+
+<p>Willingness to Learn</p>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
 
 </div>
 </section>
 
-<!-- PORTFOLIO -->
 <section id="portfolio" class="hidden">
 <div class="card">
 <h2>Portfolio</h2>
-<p>Upload your sample work here (images or projects).</p>
+<p>Here I will upload sample projects such as practice editing work, Canva designs, and training tasks as I continue learning and improving my skills.</p>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="hidden">
 <div class="card">
 <h2>Contact Me</h2>
-
-<p>Email: your@email.com</p>
-
+<p>Email: Bernardinolawrence4@gmail.com</p>
 </div>
 </section>
 
 </div>
 
-<!-- WHATSAPP BUTTON -->
-<a class="whatsapp" href="https://wa.me/6399168324416" target="_blank">
-💬
-</a>
+<a class="whatsapp" href="https://wa.me/+63 9916 832 4416" target="_blank">💬</a>
 
-<!-- RESUME BUTTON -->
-<a class="resume" href="lawrence.pdf" download>
-Download CV
-</a>
+<a class="resume" href="lawrence.pdf" download>Download CV</a>
 
-<!-- ANIMATION SCRIPT -->
 <script>
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
