@@ -1,60 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawrence Bernardino | Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #333;
-        }
-        .section {
-            margin-top: 30px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lawrence Bernardino | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    height:100%;
+    background:#111827;
+    padding-top:30px;
+    text-align:center;
+}
+
+.profile img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #38bdf8;
+}
+
+.profile h2{
+    margin-top:15px;
+}
+
+.profile p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.sidebar ul{
+    list-style:none;
+    margin-top:30px;
+}
+
+.sidebar ul li{
+    margin:20px 0;
+}
+
+.sidebar ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover{
+    color:#38bdf8;
+}
+
+.main{
+    margin-left:250px;
+}
+
+section{
+    min-height:100vh;
+    padding:80px;
+}
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    color:#cbd5e1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:#38bdf8;
+    color:black;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.section-title{
+    font-size:40px;
+    margin-bottom:30px;
+    color:#38bdf8;
+}
+
+.about p{
+    line-height:1.8;
+    max-width:800px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.job{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.portfolio-item{
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.portfolio-item img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.portfolio-item h3{
+    padding:15px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+}
+
+@media(max-width:768px){
+
+.sidebar{
+    width:100%;
+    height:auto;
+    position:relative;
+    padding-bottom:20px;
+}
+
+.main{
+    margin-left:0;
+}
+
+section{
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+}
+</style>
 </head>
+
 <body>
-    <h1>Lawrence Bernardino</h1>
-    <p>Virtual Assistant | Customer Service Representative | Editor</p>
 
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
-            I am an experienced Customer Service Representative with over 3 years of experience in chat and email support. I am passionate about helping clients, managing tasks efficiently, and creating professional content.
-        </p>
-    </div>
+<div class="sidebar">
 
-    <div class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Customer Support</li>
-            <li>Email & Chat Support</li>
-            <li>Virtual Assistance</li>
-            <li>Content Editing</li>
-            <li>Data Entry</li>
-        </ul>
-    </div>
+<div class="profile">
+<img src="https://via.placeholder.com/150" alt="">
+<h2>Lawrence Bernardino</h2>
+<p>Virtual Assistant</p>
+</div>
 
-    <div class="section">
-        <h2>Experience</h2>
-        <ul>
-            <li>Customer Service Representative - Teleperformance</li>
-            <li>Service Crew - McDonald's</li>
-        </ul>
-    </div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-    <div class="section">
-        <h2>Portfolio Purpose</h2>
-        <p>
-            I created this portfolio to showcase my editing skills and demonstrate the quality of work I can provide as a Virtual Assistant.
-        </p>
-    </div>
+</div>
+
+<div class="main">
+
+<section id="home" class="hero">
+
+<h1>Hello, I'm <span>Lawrence</span></h1>
+
+<p>
+Virtual Assistant • Customer Support Specialist • Content Editor
+</p>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</section>
+
+<section id="about" class="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p>
+I am an experienced Customer Service Representative with over 3 years of experience handling chat and email support. I created this portfolio to showcase my editing skills and professional work as a Virtual Assistant. I am passionate about helping businesses improve customer satisfaction and streamline operations through reliable administrative support.
+</p>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill">Customer Support</div>
+
+<div class="skill">Email Management</div>
+
+<div class="skill">Chat Support</div>
+
+<div class="skill">Data Entry</div>
+
+<div class="skill">Content Editing</div>
+
+<div class="skill">Canva Design</div>
+
+<div class="skill">Virtual Assistance</div>
+
+<div class="skill">Administrative Support</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="timeline">
+
+<div class="job">
+<h3>Teleperformance</h3>
+<p>Customer Service Representative</p>
+<p>Handled customer inquiries through chat and email support while maintaining excellent customer satisfaction.</p>
+</div>
+
+<div class="job">
+<h3>McDonald's</h3>
+<p>Service Crew</p>
+<p>Provided customer service and maintained operational efficiency in a fast-paced environment.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2 class="section-title">Portfolio</h2>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-item">
+<img src="https://via.placeholder.com/600x400" alt="">
+<h3>Editing Project #1</h3>
+</div>
+
+<div class="portfolio-item">
+<img src="https://via.placeholder.com/600x400" alt="">
+<h3>Editing Project #2</h3>
+</div>
+
+<div class="portfolio-item">
+<img src="https://via.placeholder.com/600x400" alt="">
+<h3>Editing Project #3</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<p>Email: your@email.com</p>
+
+<p>Facebook: Your Facebook Link</p>
+
+<p>OnlineJobs.ph Profile: Your Profile Link</p>
+
+<a href="#" class="btn">Download Resume</a>
+
+</section>
+
+<footer>
+© 2026 Lawrence Bernardino. All Rights Reserved.
+</footer>
+
+</div>
+
 </body>
 </html>
